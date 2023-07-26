@@ -68,13 +68,13 @@ pipeline {
         stage("Upload Artifact") {
             steps {
                 nexusArtifactUploader(
-                    nexusVersion: NEXUS_VERSION,
-                    protocol: NEXUS_PROTOCOL,
-                    nexusUrl: NEXUS_URL,
-                    groupId: NEXUS_REPOGRP_ID,
-                    version: ARTVERSION,
-                    repository: NEXUS_REPOSITORY,
-                    credentialsId: NEXUS_CREDENTIAL_ID,
+                    nexusVersion: 'nexus3',
+                    protocol: 'http',
+                    nexusUrl: "${NEXUSIP}:${NEXUSPORT}",
+                    groupId: 'QA',
+                    version: "${env.BUILD_ID}-${env.BUIL_TIMESTAMP}",
+                    repository: "${RELEASE_REPO}",
+                    credentialsId: "${NEXUS_LOGIN}",
                     artifacts: [
                       [artifactId: 'vproapp',
                         classifier: '',
