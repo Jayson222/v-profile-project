@@ -13,7 +13,7 @@ pipeline {
         CENTRAL_REPO = 'vprofile-mvn-central'
         NEXUSIP = '3.0.97.98'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO 'vprofile-mv-group'
+        NEXUS_GRP_REPO 'vprofile-mvn-group'
         NUXUS_LOGIN = 'nexuslogin'
 
     }
