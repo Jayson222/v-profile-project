@@ -17,6 +17,7 @@ pipeline {
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
+         
 
     }
 
@@ -84,5 +85,15 @@ pipeline {
                 )         
             }
         }
+
+        stage("Deploy On Tomcat") {
+            steps {
+                sshagent(['tomcattoken']) {
+                sh 'scp -o StrictHostKeyChecking=no target/vprofile-v2.war ec2-user@54.179.161.254:/opt/tomcat9/webapps' }
+
+            }
+        
+        }
+            
     }       
 }
