@@ -89,7 +89,7 @@ pipeline {
         stage("Deploy On Tomcat") {
             steps {
                 sshagent(['tomcattoken']) {
-                sh 'scp -o StrictHostKeyChecking=no target/vprofile-v2.war ec2-user@54.169.68.218:/opt/tomcat9/webapps' }
+                sh 'scp -o StrictHostKeyChecking=no target/vprofile-v2.war ec2-user@18.139.226.237:/opt/tomcat9/webapps' }
 
             }
         
