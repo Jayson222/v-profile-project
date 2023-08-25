@@ -15,8 +15,7 @@ pipeline {
         NEXUSPORT = '8081'
         NEXUS_GRP_REPO = 'vprofile-group'
         NEXUS_LOGIN = 'nexuslogin'
-        SONARSERVER = 'sonarserver'
-        SONARSCANNER = 'sonarscanner'
+        
          
 
     }
