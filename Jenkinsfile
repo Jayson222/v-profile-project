@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     tools {
-        maven "MAVEN3"
+        maven "maven3"
         jdk "openjdk8"
     }    
     
@@ -16,7 +16,7 @@ pipeline {
         NEXUS_GRP_REPO = 'vprofile-group'
         NEXUS_LOGIN = 'nexuslogin'
         
-    }
+     }
 
     stages {
         stage ('Build'){
