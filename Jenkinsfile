@@ -16,7 +16,7 @@ pipeline {
         NEXUS_GRP_REPO = 'vprofile-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
-        SONARSCANNER = 'sonarscanner'
+        SONARSCANNER = 'sonaescanner'
          
 
     }
@@ -89,7 +89,7 @@ pipeline {
         stage("Deploy On Tomcat") {
             steps {
                 sshagent(['tomcattoken']) {
-                sh 'scp -o StrictHostKeyChecking=no target/vprofile-v2.war ec2-user@13.236.44.89:/opt/tomcat9/webapps' }
+                sh 'scp -o StrictHostKeyChecking=no target/vprofile-v2.war ec2-user@54.252.137.203:/opt/tomcat9/webapps' }
 
             }
         
